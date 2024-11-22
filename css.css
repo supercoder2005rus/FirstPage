@@ -1,0 +1,90 @@
+body{
+	background-image: url('back.gif');
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	margin: 0;
+	display: flex;
+	align-items: center;
+}
+
+.container {
+	text-align: center;
+	color: magenta;
+	text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+	
+	height: 350px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	cursor: pointer;
+}
+
+
+#demo {
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: "Roboto", sans-serif;
+	font-weight: 500;
+	
+	color: white;
+	text-shadow: 0px 0px 5px white;
+	animation: dance .3s infinite linear;
+	animation-direction: alternate;
+}
+
+@keyframes dance {
+    from {
+		font-size: 20px;
+    }
+    to {
+        font-size: 40px;
+    }
+}
+
+.img1 {
+	animation: rotation1 10s infinite linear;
+	position: fixed;
+	left: 250px;
+	
+	-webkit-filter: drop-shadow(0px 0px 10px #fff);
+	filter: drop-shadow(0px 0px 15px #fff);
+	
+}
+
+.img2 {
+	animation: rotation2 10s infinite linear;
+	position: fixed;
+	right: 250px;
+	
+	-webkit-filter: drop-shadow(0px 0px 10px #fff);
+	filter: drop-shadow(0px 0px 15px #fff);
+}
+
+
+@keyframes rotation1 {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(359deg);
+	}
+}
+
+@keyframes rotation2 {
+	from {
+		transform: rotate(359deg);
+	}
+	to {
+		transform: rotate(0deg);
+	}
+}

@@ -1,0 +1,47 @@
+<html>
+<head>
+<title> My First Page</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css.css">
+
+<script>
+
+var btn = document.getElementById('hello_world');
+
+var flag=false;
+
+function playAudio(url) {
+ 
+if (!flag){
+	var audio = new Audio(url); 
+
+  
+	audio.loop=true;
+	audio.play();
+	flag=true;}
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+	<img src="world.png" class="img1" width=350px height=auto>
+	<img src="world.png" class="img2" width=350px height=auto>
+	
+	<div id="hello_world">
+		<div class="centered"> 
+			<h1 onclick="playAudio('song.mp3')">Hello, World !</h1>
+		</div>
+	</div>
+
+</div>
+
+<p id="demo"></p>
+
+<script>
+	document.getElementById("hello_world").addEventListener("click", function() {document.getElementById("demo").innerHTML = "Goodbye Amerika";});
+</script>
+
+</body>
+</html>
